@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class EntreTypeDetail {
+class EntreeTypeDetail {
     let name: String
     let definition: String
     let image: UIImage?
