@@ -14,7 +14,7 @@ class Entree {
     let entreeTypeArray: [EntreeType]
     let image: UIImage?
     
-    init(name: String, entreeTypeArray: [EntreeType], image: UIImage? = nil) {
+    init(name: String, entreeTypeArray: [EntreeType], image: UIImage) {
         self.name = name
         self.entreeTypeArray = entreeTypeArray
         self.image = image
