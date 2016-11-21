@@ -9,5 +9,37 @@
 import UIKit
 
 class EntreeTypeCollectionViewCell: UICollectionViewCell {
+
+    var entreeTypeLabel: UILabel!
     
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+
+        
+        entreeTypeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
+        entreeTypeLabel.font = UIFont(name: "SF UI Text", size: entreeTypeLabel.font.pointSize)
+        entreeTypeLabel.textAlignment = .center
+        contentView.addSubview(entreeTypeLabel)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    func updateWithEntreeType(entree: EntreeType) {
+        
+        self.entreeTypeLabel.text = entree.name
+        self.entreeTypeLabel.numberOfLines = 0
+        
+        self.layer.cornerRadius = 20
+        self.backgroundColor = UIColor.white
+        
+        //self.entreeLabel.font = UIFont(name: "SF UI Text", size: entreeLabel.font.pointSize)
+        
+        
+    }
+
 }

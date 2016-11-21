@@ -258,7 +258,7 @@ class EntreeController {
     //============================
     
     static let meatEntree = Entree(name: "Meat", entreeTypeArray: [porkType, liverType, kidneyType, beefType, baconType, allMeatType, vealType, rabbitType], image: #imageLiteral(resourceName: "Pig"))
-    static let bulbousStemVeggieEntree = Entree(name: "Bulbous Stem Veggies", entreeTypeArray: [pepperType, onionType, leekType, fennelType, cucumberType, zucchiniType, celeryType, aubergineType, asparagusType, tomatoType, squashType, shallotType], image: #imageLiteral(resourceName: "Tomato"))
+    static let bulbousStemVeggieEntree = Entree(name: "Stem Veggies", entreeTypeArray: [pepperType, onionType, leekType, fennelType, cucumberType, zucchiniType, celeryType, aubergineType, asparagusType, tomatoType, squashType, shallotType], image: #imageLiteral(resourceName: "Tomato"))
     static let greenSaladEntree = Entree(name: "Greens & Salad", entreeTypeArray: [rocketType, pepperType2, lettuceType, cressType, cabbageType, brussleSproutsType, broccoliType, beetType, babySpinachType, alfalfaType, watercressType, spinachType, seaweedType], image: #imageLiteral(resourceName: "Brocolli"))
     static let rootVeggieEntree = Entree(name: "Root Veggies", entreeTypeArray: [turnipType, sweetPotatoType, potatoType, carrotType, beetType, artichokeType], image: #imageLiteral(resourceName: "Carrot"))
     static let poultryEntree = Entree(name: "Poultry", entreeTypeArray: [gooseType, gameType, duckType, chickenType, pigeonType, ostrichType], image: #imageLiteral(resourceName: "Chicken"))

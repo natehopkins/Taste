@@ -12,7 +12,7 @@ import UIKit
 class Entree {
     let name: String
     let entreeTypeArray: [EntreeType]
-    let image: UIImage?
+    let image: UIImage
     
     init(name: String, entreeTypeArray: [EntreeType], image: UIImage) {
         self.name = name

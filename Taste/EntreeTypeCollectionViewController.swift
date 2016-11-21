@@ -8,18 +8,39 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "entreeTypeCell"
 
 class EntreeTypeCollectionViewController: UICollectionViewController {
 
+    var entree: Entree?
+    
+    func createCollectionViewCellLayout() {
+        let layout = UICollectionViewFlowLayout()
+        collectionView?.collectionViewLayout = layout
+        
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
+        
+        layout.itemSize = CGSize(width: 172, height: 165)// 172 165 FIX: view.frame.width
+        
+        //Header Layouts
+        
+        layout.layoutAttributesForSupplementaryView(ofKind: UICollectionElementKindSectionHeader, at: IndexPath(row: 0, section: 0))
+        
+        layout.headerReferenceSize = CGSize(width: view.frame.width, height: 100)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
+        
+        createCollectionViewCellLayout()
+        
+        self.collectionView?.backgroundColor = UIColor(red:0.37, green:0.62, blue:0.62, alpha:1.0)
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView?.register(EntreeTypeHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "supplementaryView")
+        
+        self.collectionView!.register(EntreeTypeCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -43,21 +64,34 @@ class EntreeTypeCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        guard let entree = entree else { return 0 }
+        return entree.entreeTypeArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? EntreeTypeCollectionViewCell else { return UICollectionViewCell() }
     
+        guard let entreeType = entree?.entreeTypeArray[indexPath.row] else { return UICollectionViewCell() }
+        
+        cell.updateWithEntreeType(entree: entreeType)
+        
         // Configure the cell
     
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "supplementaryView", for: indexPath) as? EntreeTypeHeaderCollectionReusableView else {
+            return EntreeTypeHeaderCollectionReusableView()
+        }
+        
+        return headerView
     }
 
     // MARK: UICollectionViewDelegate
