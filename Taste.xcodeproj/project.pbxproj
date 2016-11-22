@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D80FA9571DE398D60026BF9C /* EntreeTypeCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80FA9561DE398D60026BF9C /* EntreeTypeCollectionReusableView.swift */; };
+		D80FA95A1DE3CCE90026BF9C /* EntreeTypeDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80FA9591DE3CCE90026BF9C /* EntreeTypeDetailCollectionViewController.swift */; };
+		D80FA95D1DE3D1D10026BF9C /* EntreeTypeDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80FA95C1DE3D1D10026BF9C /* EntreeTypeDetailCollectionViewCell.swift */; };
+		D80FA95F1DE3DFA70026BF9C /* EntreeTypeDetailCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80FA95E1DE3DFA70026BF9C /* EntreeTypeDetailCollectionReusableView.swift */; };
 		D8279E851DDA5ADB00CEE47B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8279E841DDA5ADB00CEE47B /* AppDelegate.swift */; };
 		D8279E8A1DDA5ADB00CEE47B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8279E881DDA5ADB00CEE47B /* Main.storyboard */; };
 		D8279E8C1DDA5ADB00CEE47B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8279E8B1DDA5ADB00CEE47B /* Assets.xcassets */; };
@@ -26,6 +29,9 @@
 
 /* Begin PBXFileReference section */
 		D80FA9561DE398D60026BF9C /* EntreeTypeCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntreeTypeCollectionReusableView.swift; sourceTree = "<group>"; };
+		D80FA9591DE3CCE90026BF9C /* EntreeTypeDetailCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntreeTypeDetailCollectionViewController.swift; path = ../EntreeTypeDetailCollectionViewController.swift; sourceTree = "<group>"; };
+		D80FA95C1DE3D1D10026BF9C /* EntreeTypeDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntreeTypeDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		D80FA95E1DE3DFA70026BF9C /* EntreeTypeDetailCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntreeTypeDetailCollectionReusableView.swift; sourceTree = "<group>"; };
 		D8279E811DDA5ADB00CEE47B /* Taste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8279E841DDA5ADB00CEE47B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8279E891DDA5ADB00CEE47B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +71,16 @@
 			name = EntreeType;
 			sourceTree = "<group>";
 		};
+		D80FA95B1DE3CD080026BF9C /* EntreeTypeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D80FA9591DE3CCE90026BF9C /* EntreeTypeDetailCollectionViewController.swift */,
+				D80FA95C1DE3D1D10026BF9C /* EntreeTypeDetailCollectionViewCell.swift */,
+				D80FA95E1DE3DFA70026BF9C /* EntreeTypeDetailCollectionReusableView.swift */,
+			);
+			name = EntreeTypeDetail;
+			sourceTree = "<group>";
+		};
 		D8279E781DDA5ADB00CEE47B = {
 			isa = PBXGroup;
 			children = (
@@ -87,8 +103,9 @@
 				D8279E841DDA5ADB00CEE47B /* AppDelegate.swift */,
 				D8279E9E1DDA5D5E00CEE47B /* Models */,
 				D8279E881DDA5ADB00CEE47B /* Main.storyboard */,
-				D80FA9581DE399120026BF9C /* EntreeType */,
 				D8FA93351DDFC1B00000CEB9 /* Entree */,
+				D80FA9581DE399120026BF9C /* EntreeType */,
+				D80FA95B1DE3CD080026BF9C /* EntreeTypeDetail */,
 				D8FA932E1DDE64550000CEB9 /* Resources */,
 				D8279E8D1DDA5ADB00CEE47B /* LaunchScreen.storyboard */,
 				D8279E901DDA5ADB00CEE47B /* Info.plist */,
@@ -207,7 +224,10 @@
 				D8279E971DDA5B1200CEE47B /* EntreeController.swift in Sources */,
 				D8279E991DDA5B5E00CEE47B /* EntreeTypeDetail.swift in Sources */,
 				D8FA93341DDFC1A40000CEB9 /* EntreeTypeCollectionViewController.swift in Sources */,
+				D80FA95F1DE3DFA70026BF9C /* EntreeTypeDetailCollectionReusableView.swift in Sources */,
 				D8FA93321DDFBF450000CEB9 /* EntreeTypeCollectionViewCell.swift in Sources */,
+				D80FA95D1DE3D1D10026BF9C /* EntreeTypeDetailCollectionViewCell.swift in Sources */,
+				D80FA95A1DE3CCE90026BF9C /* EntreeTypeDetailCollectionViewController.swift in Sources */,
 				D8FA93091DDD0A5D0000CEB9 /* EntreeCollectionViewCell.swift in Sources */,
 				D8279E851DDA5ADB00CEE47B /* AppDelegate.swift in Sources */,
 				D8FA93071DDCFB380000CEB9 /* EntreeCollectionViewController.swift in Sources */,

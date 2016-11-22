@@ -1,24 +1,20 @@
 //
-//  EntreeTypeCollectionViewController.swift
+//  EntreeTypeDetailCollectionViewController.swift
 //  Taste
 //
-//  Created by Nathan Hopkins on 11/18/16.
+//  Created by Nathan Hopkins on 11/21/16.
 //  Copyright © 2016 NathanHopkins. All rights reserved.
 //
 
 import UIKit
 
-private let reuseIdentifier = "entreeTypeCell"
+private let reuseIdentifier = "entreeTypeDetailCell"
 
-class EntreeTypeCollectionViewController: UICollectionViewController {
 
-    var entree: Entree?
-    
-    // TEST
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = true
-    }
+
+class EntreeTypeDetailCollectionViewController: UICollectionViewController {
+
+    var entreeType: EntreeType?
     
     func createCollectionViewCellLayout() {
         let layout = UICollectionViewFlowLayout()
@@ -34,53 +30,34 @@ class EntreeTypeCollectionViewController: UICollectionViewController {
         
         layout.headerReferenceSize = CGSize(width: view.frame.width, height: 100)
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         createCollectionViewCellLayout()
-        
+
         self.collectionView?.backgroundColor = UIColor(red:0.37, green:0.62, blue:0.62, alpha:1.0)
+        
         // Register cell classes
-        self.collectionView?.register(EntreeTypeHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "supplementaryView")
+        self.collectionView!.register(EntreeTypeDetailCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        self.collectionView!.register(EntreeTypeCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
+        self.collectionView?.register(EntreeTypeDetailCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "supplementaryView")
         
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
-    //============================
-    //  Mark: - Navigation
-    //============================
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "entreeTypeCellToEntreeTypeDetail", sender: self)
-    }
+    /*
+    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "entreeTypeCellToEntreeTypeDetail" {
-            if let entreeTypeDetailVC = segue.destination as? EntreeTypeDetailCollectionViewController {
-                if let indexPath = collectionView?.indexPathsForSelectedItems?.first {
-                    if let entreeType = entree?.entreeTypeArray[indexPath.row] {
-                        
-                        entreeTypeDetailVC.entreeType = entreeType
-                    }
-                }
-            }
-        }
-
-        
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
     }
-    
+    */
 
     // MARK: UICollectionViewDataSource
 
@@ -92,29 +69,29 @@ class EntreeTypeCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        guard let entree = entree else { return 0 }
-        return entree.entreeTypeArray.count
+        guard let entreeType = entreeType else { return 0 }
+    
+        return entreeType.entreeTypeDetailArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? EntreeTypeCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? EntreeTypeDetailCollectionViewCell else { return UICollectionViewCell() }
     
-        guard let entreeType = entree?.entreeTypeArray[indexPath.row] else { return UICollectionViewCell() }
+        guard let entreeTypeDetail = entreeType?.entreeTypeDetailArray[indexPath.row] else { return UICollectionViewCell() }
         
-        cell.updateWithEntreeType(entree: entreeType)
-        
-        // Configure the cell
+        cell.updateWithEntreeTypeDetail(entreeTypeDetail: entreeTypeDetail)
     
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "supplementaryView", for: indexPath) as? EntreeTypeHeaderCollectionReusableView else {
-            return EntreeTypeHeaderCollectionReusableView()
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "supplementaryView", for: indexPath) as? EntreeTypeDetailCollectionReusableView else {
+            return EntreeTypeDetailCollectionReusableView()
         }
         
         return headerView
     }
+
 
     // MARK: UICollectionViewDelegate
 
