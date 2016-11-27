@@ -14,6 +14,7 @@ private let reuseIdentifier = "entreeTypeDetailCell"
 
 class EntreeTypeDetailCollectionViewController: UICollectionViewController {
 
+    var entree: Entree?
     var entreeType: EntreeType?
     
     func createCollectionViewCellLayout() {
@@ -48,16 +49,31 @@ class EntreeTypeDetailCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "entreeTypeDetailCellToMealReview", sender: self)
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "entreeTypeDetailCellToMealReview" {
+            if let finalMealVC = segue.destination as? FinalMealViewController {
+                if let indexPath = collectionView?.indexPathsForSelectedItems?.first {
+                    if let entreeTypeDetail = entreeType?.entreeTypeDetailArray[indexPath.row] {
+                        
+                        finalMealVC.entree = entree
+                        finalMealVC.entreeType = entreeType
+                        finalMealVC.entreeTypeDetail = entreeTypeDetail
+                    }
+                }
+            }
+        }
+        
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
 

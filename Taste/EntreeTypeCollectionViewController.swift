@@ -73,6 +73,7 @@ class EntreeTypeCollectionViewController: UICollectionViewController {
                     if let entreeType = entree?.entreeTypeArray[indexPath.row] {
                         
                         entreeTypeDetailVC.entreeType = entreeType
+                        entreeTypeDetailVC.entree = entree
                     }
                 }
             }

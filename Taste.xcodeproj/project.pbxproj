@@ -11,6 +11,7 @@
 		D80FA95A1DE3CCE90026BF9C /* EntreeTypeDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80FA9591DE3CCE90026BF9C /* EntreeTypeDetailCollectionViewController.swift */; };
 		D80FA95D1DE3D1D10026BF9C /* EntreeTypeDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80FA95C1DE3D1D10026BF9C /* EntreeTypeDetailCollectionViewCell.swift */; };
 		D80FA95F1DE3DFA70026BF9C /* EntreeTypeDetailCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80FA95E1DE3DFA70026BF9C /* EntreeTypeDetailCollectionReusableView.swift */; };
+		D80FA9611DE4CA4B0026BF9C /* FinalMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80FA9601DE4CA4B0026BF9C /* FinalMealViewController.swift */; };
 		D8279E851DDA5ADB00CEE47B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8279E841DDA5ADB00CEE47B /* AppDelegate.swift */; };
 		D8279E8A1DDA5ADB00CEE47B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8279E881DDA5ADB00CEE47B /* Main.storyboard */; };
 		D8279E8C1DDA5ADB00CEE47B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8279E8B1DDA5ADB00CEE47B /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		D80FA9591DE3CCE90026BF9C /* EntreeTypeDetailCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntreeTypeDetailCollectionViewController.swift; path = ../EntreeTypeDetailCollectionViewController.swift; sourceTree = "<group>"; };
 		D80FA95C1DE3D1D10026BF9C /* EntreeTypeDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntreeTypeDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		D80FA95E1DE3DFA70026BF9C /* EntreeTypeDetailCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntreeTypeDetailCollectionReusableView.swift; sourceTree = "<group>"; };
+		D80FA9601DE4CA4B0026BF9C /* FinalMealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalMealViewController.swift; sourceTree = "<group>"; };
 		D8279E811DDA5ADB00CEE47B /* Taste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taste.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8279E841DDA5ADB00CEE47B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8279E891DDA5ADB00CEE47B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				D8FA93351DDFC1B00000CEB9 /* Entree */,
 				D80FA9581DE399120026BF9C /* EntreeType */,
 				D80FA95B1DE3CD080026BF9C /* EntreeTypeDetail */,
+				D80FA9601DE4CA4B0026BF9C /* FinalMealViewController.swift */,
 				D8FA932E1DDE64550000CEB9 /* Resources */,
 				D8279E8D1DDA5ADB00CEE47B /* LaunchScreen.storyboard */,
 				D8279E901DDA5ADB00CEE47B /* Info.plist */,
@@ -219,6 +222,7 @@
 			files = (
 				D8FA93301DDFACF50000CEB9 /* HeaderCollectionReusableView.swift in Sources */,
 				D80FA9571DE398D60026BF9C /* EntreeTypeCollectionReusableView.swift in Sources */,
+				D80FA9611DE4CA4B0026BF9C /* FinalMealViewController.swift in Sources */,
 				D8279E9D1DDA5CC100CEE47B /* Entree.swift in Sources */,
 				D8279E9B1DDA5C3C00CEE47B /* EntreeType.swift in Sources */,
 				D8279E971DDA5B1200CEE47B /* EntreeController.swift in Sources */,

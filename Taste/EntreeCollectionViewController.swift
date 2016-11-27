@@ -76,6 +76,7 @@ class EntreeCollectionViewController: UICollectionViewController {
                 if let indexPath = collectionView?.indexPathsForSelectedItems?.first {
                     let entree = EntreeController.entreeArray[indexPath.row]
                     entreeTypeVC.entree = entree
+                    
                 }
             }
         }

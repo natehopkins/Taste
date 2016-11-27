@@ -113,10 +113,34 @@
                             <outlet property="delegate" destination="1CF-KJ-1fG" id="loj-qu-4zU"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <segue destination="bOE-BD-8xA" kind="show" identifier="entreeTypeDetailCellToMealReview" id="9vP-Bp-gk8"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Das-5N-Vfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2193" y="225"/>
+        </scene>
+        <!--Final Meal View Controller-->
+        <scene sceneID="fPZ-g8-Uea">
+            <objects>
+                <viewController id="bOE-BD-8xA" customClass="FinalMealViewController" customModule="Taste" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aga-oY-UZg"/>
+                        <viewControllerLayoutGuide type="bottom" id="ACp-Pl-PuK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QWv-VM-ueb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="T4r-VL-wKU" kind="showDetail" identifier="returnToTheBeginningButton" id="tWr-zf-G6V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1nD-Oa-CqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3074" y="225"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0zU-pA-Mib">

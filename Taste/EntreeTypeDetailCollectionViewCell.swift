@@ -50,7 +50,7 @@ class EntreeTypeDetailCollectionViewCell: UICollectionViewCell {
         definitionLabel.numberOfLines = 0
         
         self.layer.cornerRadius = 20
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = UIColor(red:0.75, green:0.75, blue:0.75, alpha:1.0)
         
         //self.entreeLabel.font = UIFont(name: "SF UI Text", size: entreeLabel.font.pointSize)
     }
